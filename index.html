@@ -16,6 +16,11 @@
             background-color: #f0f8ff;
             color: #333;
             line-height: 1.6;
+            /* 撕纸纹理背景（免费无版权） */
+            background-image: url('https://picsum.photos/id/106/1000/2000');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         /* 顶部倒计时 */
@@ -26,6 +31,7 @@
             text-align: center;
             font-size: 16px;
             font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         /* 首页标题 */
@@ -37,70 +43,99 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .home-header h1 {
             font-size: 24px;
             font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
-        /* 行程路线图 */
+        /* 行程路线图容器 */
         .route-map {
             position: relative;
-            padding: 20px;
-            background-color: #f0f8ff;
+            padding: 40px 20px;
+            background-color: rgba(240, 248, 255, 0.9);
+            margin: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
+        /* 蓝色蜿蜒路线（参考图风格） */
         .route-line {
             position: absolute;
             left: 50%;
             top: 0;
             bottom: 0;
-            width: 8px;
-            background-color: #1e90ff;
+            width: 12px;
+            background: linear-gradient(180deg, #1e90ff 0%, #4169e1 100%);
             transform: translateX(-50%);
-            border-radius: 4px;
+            border-radius: 6px;
+            z-index: 1;
         }
 
+        /* 每日行程卡片 */
         .day-item {
             position: relative;
-            margin: 30px 0;
-            padding: 16px;
+            margin: 40px 0;
+            padding: 20px;
             background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
             cursor: pointer;
-            transition: transform 0.2s;
+            transition: all 0.3s ease;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .day-item:hover {
-            transform: translateY(-4px);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
         }
 
+        /* 路线上的彩色圆点 */
         .day-item::before {
             content: '';
             position: absolute;
             left: 50%;
-            top: -20px;
-            width: 20px;
-            height: 20px;
+            top: -25px;
+            width: 24px;
+            height: 24px;
             background-color: #ff69b4;
             border: 4px solid white;
             border-radius: 50%;
             transform: translateX(-50%);
-            box-shadow: 0 0 0 2px #1e90ff;
+            box-shadow: 0 0 0 3px #1e90ff;
+            z-index: 3;
+        }
+
+        .day-content {
+            flex: 1;
         }
 
         .day-title {
             font-size: 20px;
             font-weight: 700;
             color: #1e90ff;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
         .day-desc {
             font-size: 14px;
             color: #666;
+        }
+
+        /* 每日行程图标（适配旅游主题） */
+        .day-icon {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-left: 16px;
         }
 
         /* 详情页样式 */
@@ -175,6 +210,7 @@
             height: auto;
             border-radius: 8px;
             margin: 8px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .footer {
@@ -197,39 +233,67 @@
         <div class="route-map">
             <div class="route-line"></div>
 
+            <!-- Day1 悉尼市区（城市图标） -->
             <div class="day-item" onclick="showDetail('day1')">
-                <div class="day-title">Day 1</div>
-                <div class="day-desc">悉尼市区精准行程</div>
+                <div class="day-content">
+                    <div class="day-title">Day 1</div>
+                    <div class="day-desc">悉尼市区精准行程</div>
+                </div>
+                <img src="https://picsum.photos/id/433/100/100" alt="城市" class="day-icon">
             </div>
 
+            <!-- Day2 悉尼景点（地标图标） -->
             <div class="day-item" onclick="showDetail('day2')">
-                <div class="day-title">Day 2</div>
-                <div class="day-desc">悉尼经典景点一日</div>
+                <div class="day-content">
+                    <div class="day-title">Day 2</div>
+                    <div class="day-desc">悉尼经典景点一日</div>
+                </div>
+                <img src="https://picsum.photos/id/1015/100/100" alt="地标" class="day-icon">
             </div>
 
+            <!-- Day3 自驾（汽车图标） -->
             <div class="day-item" onclick="showDetail('day3')">
-                <div class="day-title">Day 3</div>
-                <div class="day-desc">悉尼 → Narooma 自驾日</div>
+                <div class="day-content">
+                    <div class="day-title">Day 3</div>
+                    <div class="day-desc">悉尼 → Narooma 自驾日</div>
+                </div>
+                <img src="https://picsum.photos/id/1072/100/100" alt="自驾" class="day-icon">
             </div>
 
+            <!-- Day4 海滩（海滩图标） -->
             <div class="day-item" onclick="showDetail('day4')">
-                <div class="day-title">Day 4</div>
-                <div class="day-desc">Narooma → Lake Entrance</div>
+                <div class="day-content">
+                    <div class="day-title">Day 4</div>
+                    <div class="day-desc">Narooma → Lake Entrance</div>
+                </div>
+                <img src="https://picsum.photos/id/1019/100/100" alt="海滩" class="day-icon">
             </div>
 
+            <!-- Day5 考拉（考拉图标） -->
             <div class="day-item" onclick="showDetail('day5')">
-                <div class="day-title">Day 5</div>
-                <div class="day-desc">Lake Entrance → Wilsons Prom</div>
+                <div class="day-content">
+                    <div class="day-title">Day 5</div>
+                    <div class="day-desc">Lake Entrance → Wilsons Prom</div>
+                </div>
+                <img src="https://picsum.photos/id/1025/100/100" alt="考拉" class="day-icon">
             </div>
 
+            <!-- Day6 徒步（徒步图标） -->
             <div class="day-item" onclick="showDetail('day6')">
-                <div class="day-title">Day 6</div>
-                <div class="day-desc">Wilsons Prom 全家深度一日</div>
+                <div class="day-content">
+                    <div class="day-title">Day 6</div>
+                    <div class="day-desc">Wilsons Prom 全家深度一日</div>
+                </div>
+                <img src="https://picsum.photos/id/1036/100/100" alt="徒步" class="day-icon">
             </div>
 
+            <!-- Day7 返程（公路图标） -->
             <div class="day-item" onclick="showDetail('day7')">
-                <div class="day-title">Day 7</div>
-                <div class="day-desc">Wilsons Prom → 墨尔本</div>
+                <div class="day-content">
+                    <div class="day-title">Day 7</div>
+                    <div class="day-desc">Wilsons Prom → 墨尔本</div>
+                </div>
+                <img src="https://picsum.photos/id/1047/100/100" alt="公路" class="day-icon">
             </div>
         </div>
     </div>
@@ -243,6 +307,7 @@
 
         <div class="section">
             <div class="section-title">07:55–08:30 抵达悉尼金斯福德史密斯机场</div>
+            <img src="https://picsum.photos/id/1048/800/400" alt="悉尼机场" class="trip-img">
         </div>
 
         <div class="section">
@@ -267,6 +332,7 @@
                 <div class="timeline-time">预算</div>
                 <div class="timeline-content">列车票约 4–6 澳元/人</div>
             </div>
+            <img src="https://picsum.photos/id/1067/800/400" alt="悉尼列车" class="trip-img">
         </div>
 
         <div class="section">
@@ -304,19 +370,23 @@
                 <div class="timeline-time">预算</div>
                 <div class="timeline-content">早午餐 20–40 澳元/人</div>
             </div>
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="帕丁顿街区" class="trip-img">
+            <img src="https://picsum.photos/id/1058/800/400" alt="帕丁顿街区" class="trip-img">
         </div>
 
-        <!-- 其他时段内容类似，可按此结构补充 -->
+        <!-- 其他时段内容可按此结构补充 -->
     </div>
 
-    <!-- Day 2 到 Day 7 详情页结构类似，可按Day1的格式补充 -->
+    <!-- Day 2 到 Day 7 详情页（保留原有结构，仅补充示例图片） -->
     <div id="day2" class="detail-page">
         <button class="back-btn" onclick="showHome()">← 返回首页</button>
         <div class="detail-header">
             <h2>Day 2 悉尼经典景点一日</h2>
         </div>
-        <!-- 内容按Day1格式补充 -->
+        <div class="section">
+            <div class="section-title">09:00–09:30 酒店 → 悉尼歌剧院</div>
+            <img src="https://picsum.photos/id/1041/800/400" alt="悉尼歌剧院" class="trip-img">
+        </div>
+        <!-- 其余内容按Day1格式补充 -->
     </div>
 
     <div id="day3" class="detail-page">
@@ -324,7 +394,11 @@
         <div class="detail-header">
             <h2>Day 3 悉尼 → Narooma 自驾日</h2>
         </div>
-        <!-- 内容按Day1格式补充 -->
+        <div class="section">
+            <div class="section-title">07:30 悉尼准时出发</div>
+            <img src="https://picsum.photos/id/1071/800/400" alt="澳洲自驾公路" class="trip-img">
+        </div>
+        <!-- 其余内容按Day1格式补充 -->
     </div>
 
     <div id="day4" class="detail-page">
@@ -332,7 +406,11 @@
         <div class="detail-header">
             <h2>Day 4 Narooma → Lake Entrance</h2>
         </div>
-        <!-- 内容按Day1格式补充 -->
+        <div class="section">
+            <div class="section-title">14:00–15:00 Hyams Beach 游泳</div>
+            <img src="https://picsum.photos/id/1019/800/400" alt="Hyams Beach" class="trip-img">
+        </div>
+        <!-- 其余内容按Day1格式补充 -->
     </div>
 
     <div id="day5" class="detail-page">
@@ -340,7 +418,11 @@
         <div class="detail-header">
             <h2>Day 5 Lake Entrance → Wilsons Prom</h2>
         </div>
-        <!-- 内容按Day1格式补充 -->
+        <div class="section">
+            <div class="section-title">10:34–11:34 Raymond Island 找考拉</div>
+            <img src="https://picsum.photos/id/1025/800/400" alt="野生考拉" class="trip-img">
+        </div>
+        <!-- 其余内容按Day1格式补充 -->
     </div>
 
     <div id="day6" class="detail-page">
@@ -348,7 +430,11 @@
         <div class="detail-header">
             <h2>Day 6 Wilsons Prom 全家深度一日</h2>
         </div>
-        <!-- 内容按Day1格式补充 -->
+        <div class="section">
+            <div class="section-title">13:45–16:00 Mt Oberon 登顶徒步</div>
+            <img src="https://picsum.photos/id/1036/800/400" alt="徒步登山" class="trip-img">
+        </div>
+        <!-- 其余内容按Day1格式补充 -->
     </div>
 
     <div id="day7" class="detail-page">
@@ -356,7 +442,11 @@
         <div class="detail-header">
             <h2>Day 7 Wilsons Prom → 墨尔本</h2>
         </div>
-        <!-- 内容按Day1格式补充 -->
+        <div class="section">
+            <div class="section-title">11:10–12:00 San Remo 渔港喂鹈鹕</div>
+            <img src="https://picsum.photos/id/1043/800/400" alt="渔港鹈鹕" class="trip-img">
+        </div>
+        <!-- 其余内容按Day1格式补充 -->
     </div>
 
     <div class="footer">
