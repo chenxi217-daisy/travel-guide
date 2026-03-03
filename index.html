@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>澳大利亚东海岸自驾攻略</title>
+    <title>澳大利亚东海岸7天自驾攻略</title>
     <style>
         * {
             margin: 0;
@@ -16,7 +16,6 @@
             background-color: #f0f8ff;
             color: #333;
             line-height: 1.6;
-            /* 撕纸纹理背景（免费无版权） */
             background-image: url('https://picsum.photos/id/106/1000/2000');
             background-size: cover;
             background-repeat: no-repeat;
@@ -64,7 +63,7 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        /* 蓝色蜿蜒路线（参考图风格） */
+        /* 蓝色蜿蜒路线 */
         .route-line {
             position: absolute;
             left: 50%;
@@ -98,7 +97,7 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.15);
         }
 
-        /* 路线上的彩色圆点 */
+        /* 路线圆点 */
         .day-item::before {
             content: '';
             position: absolute;
@@ -130,7 +129,7 @@
             color: #666;
         }
 
-        /* 每日行程图标（适配旅游主题） */
+        /* 每日图标 */
         .day-icon {
             width: 50px;
             height: 50px;
@@ -233,7 +232,7 @@
         <div class="route-map">
             <div class="route-line"></div>
 
-            <!-- Day1 悉尼市区（城市图标） -->
+            <!-- Day1 悉尼市区 -->
             <div class="day-item" onclick="showDetail('day1')">
                 <div class="day-content">
                     <div class="day-title">Day 1</div>
@@ -242,7 +241,7 @@
                 <img src="https://picsum.photos/id/433/100/100" alt="城市" class="day-icon">
             </div>
 
-            <!-- Day2 悉尼景点（地标图标） -->
+            <!-- Day2 悉尼景点 -->
             <div class="day-item" onclick="showDetail('day2')">
                 <div class="day-content">
                     <div class="day-title">Day 2</div>
@@ -251,7 +250,7 @@
                 <img src="https://picsum.photos/id/1015/100/100" alt="地标" class="day-icon">
             </div>
 
-            <!-- Day3 自驾（汽车图标） -->
+            <!-- Day3 自驾 -->
             <div class="day-item" onclick="showDetail('day3')">
                 <div class="day-content">
                     <div class="day-title">Day 3</div>
@@ -260,7 +259,7 @@
                 <img src="https://picsum.photos/id/1072/100/100" alt="自驾" class="day-icon">
             </div>
 
-            <!-- Day4 海滩（海滩图标） -->
+            <!-- Day4 海滩 -->
             <div class="day-item" onclick="showDetail('day4')">
                 <div class="day-content">
                     <div class="day-title">Day 4</div>
@@ -269,7 +268,7 @@
                 <img src="https://picsum.photos/id/1019/100/100" alt="海滩" class="day-icon">
             </div>
 
-            <!-- Day5 考拉（考拉图标） -->
+            <!-- Day5 考拉 -->
             <div class="day-item" onclick="showDetail('day5')">
                 <div class="day-content">
                     <div class="day-title">Day 5</div>
@@ -278,7 +277,7 @@
                 <img src="https://picsum.photos/id/1025/100/100" alt="考拉" class="day-icon">
             </div>
 
-            <!-- Day6 徒步（徒步图标） -->
+            <!-- Day6 徒步 -->
             <div class="day-item" onclick="showDetail('day6')">
                 <div class="day-content">
                     <div class="day-title">Day 6</div>
@@ -287,7 +286,7 @@
                 <img src="https://picsum.photos/id/1036/100/100" alt="徒步" class="day-icon">
             </div>
 
-            <!-- Day7 返程（公路图标） -->
+            <!-- Day7 返程 -->
             <div class="day-item" onclick="showDetail('day7')">
                 <div class="day-content">
                     <div class="day-title">Day 7</div>
@@ -372,81 +371,572 @@
             </div>
             <img src="https://picsum.photos/id/1058/800/400" alt="帕丁顿街区" class="trip-img">
         </div>
-
-        <!-- 其他时段内容可按此结构补充 -->
     </div>
 
-    <!-- Day 2 到 Day 7 详情页（保留原有结构，仅补充示例图片） -->
+    <!-- Day 2 详情页 -->
     <div id="day2" class="detail-page">
         <button class="back-btn" onclick="showHome()">← 返回首页</button>
         <div class="detail-header">
             <h2>Day 2 悉尼经典景点一日</h2>
         </div>
+
         <div class="section">
             <div class="section-title">09:00–09:30 酒店 → 悉尼歌剧院</div>
+            <div class="timeline-item">
+                <div class="timeline-time">交通方式</div>
+                <div class="timeline-content">333 公交（Bondi Junction Station→Circular Quay，23分钟）+ 步行9分钟</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">关键贴士</div>
+                <div class="timeline-content">招手停车；下车前按铃；跟随Google Maps避免坐过站</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">预算</div>
+                <div class="timeline-content">公交约2–3澳元/人</div>
+            </div>
             <img src="https://picsum.photos/id/1041/800/400" alt="悉尼歌剧院" class="trip-img">
         </div>
-        <!-- 其余内容按Day1格式补充 -->
+
+        <div class="section">
+            <div class="section-title">09:30–11:00 悉尼歌剧院外部游览 + 拍照</div>
+            <div class="timeline-item">
+                <div class="timeline-time">地址</div>
+                <div class="timeline-content">
+                    <a href="https://www.google.com/maps/search/Bennelong Point, Sydney NSW 2000" class="map-link" target="_blank">Bennelong Point, Sydney NSW 2000</a>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">拍照点</div>
+                <div class="timeline-content">与贝壳状建筑和悉尼海港大桥同框拍照</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">11:00–12:30 皇家植物园 + 麦考利夫人座椅</div>
+            <div class="timeline-item">
+                <div class="timeline-time">交通方式</div>
+                <div class="timeline-content">步行19分钟</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">必打卡</div>
+                <div class="timeline-content">麦考利夫人座椅，是拍摄歌剧院和大桥同框的经典机位</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">12:30–13:30 圣玛丽大教堂 + 午餐</div>
+            <div class="timeline-item">
+                <div class="timeline-time">交通方式</div>
+                <div class="timeline-content">步行24分钟</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">午餐推荐</div>
+                <div class="timeline-content">Botanic House（现代澳餐，人均20–40澳元）</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">预算</div>
+                <div class="timeline-content">午餐约30–50澳元/人</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">13:30–14:30 圣玛丽大教堂参观</div>
+            <div class="timeline-item">
+                <div class="timeline-time">开放时间</div>
+                <div class="timeline-content">周一至周五 06:30–18:30；周末 06:30–19:00</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">注意事项</div>
+                <div class="timeline-content">保持安静，可拍摄彩色玻璃窗</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">14:30–14:37 澳大利亚博物馆</div>
+            <div class="timeline-item">
+                <div class="timeline-time">交通方式</div>
+                <div class="timeline-content">步行4分钟</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">地址</div>
+                <div class="timeline-content">
+                    <a href="https://www.google.com/maps/search/1 William St, Darlinghurst NSW 2010" class="map-link" target="_blank">1 William St, Darlinghurst NSW 2010</a>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">开放时间</div>
+                <div class="timeline-content">10:00–17:00，无需预约</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">14:37–17:00 澳大利亚博物馆深度游览</div>
+            <div class="timeline-item">
+                <div class="timeline-time">重点展览</div>
+                <div class="timeline-content">原住民文化展、矿物与宝石馆、恐龙骨架展</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">餐饮</div>
+                <div class="timeline-content">二楼有简餐供应</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">17:00–17:30 博物馆 → 岩石区</div>
+            <div class="timeline-item">
+                <div class="timeline-time">交通方式</div>
+                <div class="timeline-content">步行10分钟 + L2轻轨（Town Hall→Circular Quay，9分钟）+ 步行11分钟</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">支付方式</div>
+                <div class="timeline-content">使用Opal卡或Visa/Master芯片卡刷卡上下车</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">预算</div>
+                <div class="timeline-content">轻轨约3–4澳元/人</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">19:30–20:05 岩石区 → 酒店</div>
+            <div class="timeline-item">
+                <div class="timeline-time">交通方式</div>
+                <div class="timeline-content">步行12分钟 + 333公交（Circular Quay→Bondi Junction，22分钟）+ 步行1分钟</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">贴士</div>
+                <div class="timeline-content">夜班公交充足，招手停车</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">预算</div>
+                <div class="timeline-content">公交约2–3澳元/人</div>
+            </div>
+        </div>
     </div>
 
+    <!-- Day 3 详情页 -->
     <div id="day3" class="detail-page">
         <button class="back-btn" onclick="showHome()">← 返回首页</button>
         <div class="detail-header">
             <h2>Day 3 悉尼 → Narooma 自驾日</h2>
         </div>
+
         <div class="section">
             <div class="section-title">07:30 悉尼准时出发</div>
+            <div class="timeline-item">
+                <div class="timeline-time">路线</div>
+                <div class="timeline-content">走Princes Hwy（A1）沿海向南，避开市区拥堵</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">准备</div>
+                <div class="timeline-content">在悉尼南区加油站加满油，检查胎压，带早餐路上吃</div>
+            </div>
             <img src="https://picsum.photos/id/1071/800/400" alt="澳洲自驾公路" class="trip-img">
         </div>
-        <!-- 其余内容按Day1格式补充 -->
+
+        <div class="section">
+            <div class="section-title">09:30–10:10 Kiama 核心打卡</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">Kiama Blowhole喷水孔、Kiama Lighthouse灯塔、Bombo Headland观景台</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">最佳时间</div>
+                <div class="timeline-content">09:50–10:30涨潮时段，喷水效果震撼</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Kiama Blowhole Car Park（免费），离礁石5米安全距离</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">11:30–13:00 Gerringong 打卡 + 午餐</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">Gerringong Headland悬崖观景、Werri Beach浅逛</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">午餐推荐</div>
+                <div class="timeline-content">The Boat Shed Gerringong（海鲜简餐，窗边海景位）</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Gerringong Headland Car Park（免费）</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">14:00–15:00 Hyams Beach 游泳</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">世界最白沙滩，浅滩平缓，10:00–16:00有救生员</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">安全提示</div>
+                <div class="timeline-content">仅在红黄旗内游泳，带淡水冲淋巾</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Hyams Beach Car Park（免费）</div>
+            </div>
+            <img src="https://picsum.photos/id/1019/800/400" alt="Hyams Beach" class="trip-img">
+        </div>
+
+        <div class="section">
+            <div class="section-title">15:45–16:20 Boat Harbour Beach 看魔鬼鱼</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">Narooma官方最佳魔鬼鱼观赏点，17:00–17:50落潮黄金时段</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">安全提示</div>
+                <div class="timeline-content">在防波堤内侧浅水区，岸边即可清晰观赏，不触碰</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Boat Harbour Beach Car Park（免费）</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">16:30–17:00 Pebbly Beach 看野生袋鼠</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">沙滩、树荫下成群野生袋鼠，近距离拍照（不投喂）</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">安全提示</div>
+                <div class="timeline-content">保持2米距离，不投喂，带防晒和帽子</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Pebbly Beach Car Park（免费）</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">19:00 后 Narooma 海鲜晚餐</div>
+            <div class="timeline-item">
+                <div class="timeline-time">推荐</div>
+                <div class="timeline-content">当地生蚝、龙虾，选海边餐厅，饭后散步消食</div>
+            </div>
+        </div>
     </div>
 
+    <!-- Day 4 详情页 -->
     <div id="day4" class="detail-page">
         <button class="back-btn" onclick="showHome()">← 返回首页</button>
         <div class="detail-header">
             <h2>Day 4 Narooma → Lake Entrance</h2>
         </div>
+
         <div class="section">
-            <div class="section-title">14:00–15:00 Hyams Beach 游泳</div>
-            <img src="https://picsum.photos/id/1019/800/400" alt="Hyams Beach" class="trip-img">
+            <div class="section-title">07:30–08:00 酒店早餐 + 退房</div>
+            <div class="timeline-item">
+                <div class="timeline-time">准备</div>
+                <div class="timeline-content">收拾行李，寄存游泳装备，轻装出发</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">贴士</div>
+                <div class="timeline-content">酒店前台可免费寄存行李30分钟</div>
+            </div>
         </div>
-        <!-- 其余内容按Day1格式补充 -->
+
+        <div class="section">
+            <div class="section-title">08:00–09:00 Narooma 速逛</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">Australia Rock + 灯塔、Mill Bay Boardwalk滨海栈道（看黄貂鱼）</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Australia Rock Car Park（免费）、Mill Bay Car Park（免费）</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">09:40–10:20 Bermagui Blue Pool</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">天然海水泳池，池底可看到鱼蟹</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停留时长</div>
+                <div class="timeline-content">45分钟</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">11:30–13:00 Merimbula 午餐</div>
+            <div class="timeline-item">
+                <div class="timeline-time">推荐</div>
+                <div class="timeline-content">The Oyster Inn或Wheelhouse，新鲜生蚝+炸鱼薯条</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">拍照点</div>
+                <div class="timeline-content">Main Beach或Panorama Lookout（5分钟车程）</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">14:00–15:00 Eden 游玩</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">Eden Killer Whale Museum（了解捕鲸历史）、Aslings Beach、白色小教堂</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">午餐推荐</div>
+                <div class="timeline-content">The Wharf Restaurant（海景+本地海鲜）</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">18:10–19:30 Bullock Island 栈桥抓蟹</div>
+            <div class="timeline-item">
+                <div class="timeline-time">准备</div>
+                <div class="timeline-content">钓鱼证$10/人（3天）、租蟹网$5/个、鸡肉诱饵$3/份</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">规则</div>
+                <div class="timeline-content">每人限30只，蟹壳≥5cm，小蟹放生</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Lake Entrance Visitor Centre Car Park（免费）</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">19:00 后 入住酒店</div>
+            <div class="timeline-item">
+                <div class="timeline-time">贴士</div>
+                <div class="timeline-content">带厨房可直接煮蟹，配当地啤酒</div>
+            </div>
+        </div>
     </div>
 
+    <!-- Day 5 详情页 -->
     <div id="day5" class="detail-page">
         <button class="back-btn" onclick="showHome()">← 返回首页</button>
         <div class="detail-header">
             <h2>Day 5 Lake Entrance → Wilsons Prom</h2>
         </div>
+
+        <div class="section">
+            <div class="section-title">08:30–09:30 早餐 + 退房 + 还蟹网</div>
+            <div class="timeline-item">
+                <div class="timeline-time">准备</div>
+                <div class="timeline-content">清洗蟹网归还，收拾行李，带足水和简餐（园区无补给）</div>
+            </div>
+        </div>
+
         <div class="section">
             <div class="section-title">10:34–11:34 Raymond Island 找考拉</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">2.1km轻松环线，慢行找野生考拉（大概率偶遇）</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Koala Trail起点停车场（免费）</div>
+            </div>
             <img src="https://picsum.photos/id/1025/800/400" alt="野生考拉" class="trip-img">
         </div>
-        <!-- 其余内容按Day1格式补充 -->
+
+        <div class="section">
+            <div class="section-title">13:38–14:28 Big Drift 滑沙徒步</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">4km往返轻徒步，爬白沙沙丘+滑沙+拍沙漠海景</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">贴士</div>
+                <div class="timeline-content">穿防滑鞋+墨镜（防沙），可自带滑沙板，避开大风天</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Big Drift Car Park（免费）</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">16:00–17:00 Norman Beach 游泳</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">园区最安全泳点，浅坡平缓，10:00–16:00有救生员</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Norman Beach Car Park（免费），有卫生间和野餐区</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">17:00 办理入住 + 晚餐</div>
+            <div class="timeline-item">
+                <div class="timeline-time">贴士</div>
+                <div class="timeline-content">园区内无夜市，吃自备简餐或酒店简餐，早休整</div>
+            </div>
+        </div>
     </div>
 
+    <!-- Day 6 详情页 -->
     <div id="day6" class="detail-page">
         <button class="back-btn" onclick="showHome()">← 返回首页</button>
         <div class="detail-header">
             <h2>Day 6 Wilsons Prom 全家深度一日</h2>
         </div>
+
         <div class="section">
-            <div class="section-title">13:45–16:00 Mt Oberon 登顶徒步</div>
+            <div class="section-title">08:15–09:45 Wild Walk 轻徒步（全家）</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">2.8km平缓木栈道，无爬坡，老人小孩轻松走，看海景+原生植被</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Tidal River Main Car Park（免费），步行2分钟到起点</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">09:45–10:34 Whisky Bay 海滩打卡</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">人少景美，沙滩平缓，无大浪，适合拍照</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Whisky Bay Car Park（免费），步行5分钟到海滩</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">10:35–11:26 Squeaky Beach 网红沙滩</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">白沙细腻，脚踩会发出“吱吱”声，拍照超出片</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Squeaky Beach Car Park（免费），步行3分钟到沙滩</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">12:00–13:30 营地午餐 + 老人休整</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">享用自备野餐，老人全程静坐休息，恢复体力</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Norman Beach Car Park（免费），步行2分钟到野餐区</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">13:45–16:00 Mt Oberon 登顶徒步（青年组）</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">4.8km往返，俯瞰Wilsons Prom全景+所有海湾，视野震撼</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">贴士</div>
+                <div class="timeline-content">穿防滑徒步鞋，带1瓶水/人，山顶风大，带薄外套</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Mt Oberon Summit Trailhead（免费）</div>
+            </div>
             <img src="https://picsum.photos/id/1036/800/400" alt="徒步登山" class="trip-img">
         </div>
-        <!-- 其余内容按Day1格式补充 -->
+
+        <div class="section">
+            <div class="section-title">16:15–16:45 全家休整 + Norman Beach 轻逛</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">汇合后一起逛海滩，拍全家合照，享受最后海边时光</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">17:00 后 抵达酒店 → 休整放松</div>
+            <div class="timeline-item">
+                <div class="timeline-time">贴士</div>
+                <div class="timeline-content">洗漱休息，晚餐可在酒店简餐或自备食材</div>
+            </div>
+        </div>
     </div>
 
+    <!-- Day 7 详情页 -->
     <div id="day7" class="detail-page">
         <button class="back-btn" onclick="showHome()">← 返回首页</button>
         <div class="detail-header">
             <h2>Day 7 Wilsons Prom → 墨尔本</h2>
         </div>
+
+        <div class="section">
+            <div class="section-title">08:30–09:00 前往 Cape Liptrap</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">清晨观景台远眺海岸线，观察野生袋鼠、鸸鹋（清晨活跃度最高）</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">园区入口免费露天停车场（车位充足）</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">10:05–11:05 George Bass 海岸徒步</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">2.4km往返，平缓悬崖步道，观赏玄武岩海岸与碧蓝海水，适配老人小孩</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">Punch Bowl Rd终点专属免费停车场（中等规模）</div>
+            </div>
+        </div>
+
         <div class="section">
             <div class="section-title">11:10–12:00 San Remo 渔港喂鹈鹕</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">12:00固定喂食时段，可亲手投喂温顺大鹈鹕</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">渔港旁免费市政停车场（近Jetty，车位充足）</div>
+            </div>
             <img src="https://picsum.photos/id/1043/800/400" alt="渔港鹈鹕" class="trip-img">
         </div>
-        <!-- 其余内容按Day1格式补充 -->
+
+        <div class="section">
+            <div class="section-title">12:00–12:55 Kilcunda 小镇午餐</div>
+            <div class="timeline-item">
+                <div class="timeline-time">核心亮点</div>
+                <div class="timeline-content">家庭友好型餐厅品尝当地海鲜/简餐，步行至网红木质栈桥漫步</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">停车</div>
+                <div class="timeline-content">餐厅专属免费停车场（含儿童车位）</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">12:55–14:55 返回墨尔本</div>
+            <div class="timeline-item">
+                <div class="timeline-time">路线</div>
+                <div class="timeline-content">走M1高速，车程约2小时，中途可在Koo Wee Rup服务区短暂休整10分钟</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">贴士</div>
+                <div class="timeline-content">避免疲劳驾驶，进城预留轻微堵车缓冲，提前联系酒店确认入住</div>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
